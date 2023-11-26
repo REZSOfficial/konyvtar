@@ -11,6 +11,8 @@
       </div>
       <button onclick="submitEditForm({{$book->id}})" type="submit" id="saveBtn" class="disabled btn btn-secondary">Mentés</button>
     </form>
+    <p>Létrehozva: {{$book->created_at}}</p>
+    <p>Frissítve: {{$book->updated_at}}</p>
 </div>
 @endsection
 
