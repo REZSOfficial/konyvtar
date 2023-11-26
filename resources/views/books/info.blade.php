@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
-<div class="m-4 d-flex flex-lg-row flex-sm-column flex-md-column">
-    <img src="{{ asset('images/'.$book->image) }}" class="infoimage" alt="Cover">
+<div class="m-4 d-flex flex-column flex-lg-row flex-sm-column flex-md-column">
+    <img src="{{ asset('images/'.$book->image) }}" class="img-fluid" alt="Cover">
     <form>
     <div class="book-info d-flex flex-column">
         <input onclick="enableBtn()" name="title" size="64" class="title" id="title" type="text" value="{{$book->title}}">

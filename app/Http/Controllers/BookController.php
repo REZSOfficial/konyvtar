@@ -4,11 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use Illuminate\Http\Request;
+use Stichoza\GoogleTranslate\GoogleTranslate;
 
 class BookController extends Controller
 {
     public function index(){
         $books = Book::latest()->filter(request(['search']))->get();
+        return view('index', compact('books'));
+    }
+
+    public function english(){
+        $books = Book::latest()->filter(request(['search']))->get();
+        foreach($books as $book){
+            $tr = new GoogleTranslate('en');
+            $tr->setSource('hu');
+            $book->title = $tr->translate($book->title);
+            $book->tags = $tr->translate($book->tags);
+        }
         return view('index', compact('books'));
     }
 

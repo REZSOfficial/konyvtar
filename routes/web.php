@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use Stichoza\GoogleTranslate\GoogleTranslate;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,8 @@ use App\Http\Controllers\BookController;
 Route::get('/create', [BookController::class, 'create']);
 
 Route::get('/', [BookController::class, 'index'])->name('home');
+
+Route::get('/en', [BookController::class, 'english'])->name('home');
 
 Route::get('/{book}', [BookController::class, 'info']);
 

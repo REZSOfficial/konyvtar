@@ -24,5 +24,6 @@
 </div>
 </div>
 <div class="fixedbutton"><a class="addBtn" href="/create">+</a></div>
+<div class="fixedbutton2"><a class="library" href="/en">English</a></div>
 
 @endsection

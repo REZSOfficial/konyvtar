@@ -1,6 +1,6 @@
 <ul class="nav navbar-dark nav-tabs bg-dark p-1 d-flex justify-content-between">
     <li class="nav-item d-flex mt-1">
-      <a style="color: #C4AF9A !important" class="library" href="/">KÖNYVTÁR</a>
+      <a class="library" href="/">KÖNYVTÁR</a>
     </li>
     <li>
       <form action="/" class="form-inline d-flex flex-row my-2">
