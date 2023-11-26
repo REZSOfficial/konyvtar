@@ -5,3 +5,4 @@
 <p>Másolni kell a .env.example fájlt és át kell nevezni .env-re. Meg kell nyitni a .env fájlt és be kell állítani a környezeti változókat, például adatbázis kapcsolatokat.</p>
 <p>Ez után futtatni kell a következő parancsot az alkalmazás kulcsának generálásához: php artisan key:generate</p>
 <p>A php artisan serve paranccsal futtatható a program.</p>
+<p>php artisan migrate paranccsal jönnek létre az atadbázis táblák</p>
