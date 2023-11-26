@@ -16,7 +16,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     </head>
     <body>
-        @include('inc.navbar')
+        
         <div>
             @yield('content')
         </div>

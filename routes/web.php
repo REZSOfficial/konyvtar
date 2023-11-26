@@ -20,7 +20,7 @@ Route::get('/', [BookController::class, 'index']);
 
 Route::get('/{book}', [BookController::class, 'info']);
 
-Route::put('/edit/{book}', [BookController::class, 'update']);
+Route::post('/edit/{book}', [BookController::class, 'update']);
 
 Route::delete('/delete/{book}', [BookController::class, 'delete']);
 

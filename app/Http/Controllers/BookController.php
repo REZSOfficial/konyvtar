@@ -46,6 +46,7 @@ class BookController extends Controller
     }
 
     public function save(Request $request){
+        dd($request);
         $formFields = $request->validate([
             'title' => 'required',
             'tags' => 'required',
@@ -61,6 +62,6 @@ class BookController extends Controller
         
         Book::create($formFields);
 
-        return redirect()->back()->with('status','Book Created Successfully');
+        return response()->json(['message' => 'Sikeres frissítés']);
     }
 }

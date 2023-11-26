@@ -2,12 +2,6 @@ body {
     font-family: 'Rubik', sans-serif !important;
 }
 
-.book-info-container {
-    height: 100%;
-    width: 100%;
-    align-items: center;
-}
-
 .book-info {
     width: 50% !important;
 }
@@ -42,7 +36,6 @@ textarea {
 
 .title {
     font-size: 2rem;
-
 }
 
 .description {
@@ -53,7 +46,6 @@ textarea {
 }
 
 .disabled {
-    transition: 200ms;
     visibility: hidden;
 }
 
