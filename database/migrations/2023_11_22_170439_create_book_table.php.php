@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('pages');
             $table->longText('description');
             $table->string('tags');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

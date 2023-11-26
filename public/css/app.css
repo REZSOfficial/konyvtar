@@ -2,15 +2,9 @@ body {
     font-family: 'Rubik', sans-serif !important;
 }
 
-.book-info {
-    width: 50% !important;
-}
-
 img {
-    height: 375px !important;
-    width: 243px !important;
     margin-right: 40px !important;
-    margin-bottom: 40px !important;
+    margin-bottom: 20px !important;
 }
 
 .card {
@@ -18,7 +12,20 @@ img {
 }
 
 .card-title {
-    height: 3rem;
+    height: 2rem;
+}
+
+.card-img-top {
+    cursor: pointer;
+}
+
+.hover {
+    transition-duration: 200ms;
+}
+
+.hover:hover {
+    transition-duration: 200ms;
+    width: 17rem !important;
 }
 
 .buttons {
@@ -39,8 +46,10 @@ textarea {
 }
 
 .description {
-    width: 100%;
+    width: 50%;
     height: 100%;
+    border: 2px solid #343a40;
+    border-radius: 10px;
     font-size: 1rem;
     line-height: 1.5rem !important;
 }
@@ -117,4 +126,16 @@ textarea {
 
 .nav-link {
     font-size: 1.5rem;
+}
+
+.infoimage {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.library {
+    all: unset;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: 5px;
 }

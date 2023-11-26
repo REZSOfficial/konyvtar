@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class BookController extends Controller
 {
     public function index(){
-        $books = Book::all();
+        $books = Book::latest()->filter(request(['search']))->get();
         return view('index', compact('books'));
     }
 
@@ -46,22 +46,26 @@ class BookController extends Controller
     }
 
     public function save(Request $request){
-        dd($request);
         $formFields = $request->validate([
             'title' => 'required',
             'tags' => 'required',
             'pages' => 'required',
             'description' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        if($request->hasFile('logo')){
-            $logo = $request->file('logo');
-            $storedLogo = $logo->store('logos', 'public');
-            $formFields['logo'] = $storedLogo;
-        }
-        
-        Book::create($formFields);
+        $fileName = time() . '.' . $request->image->extension();
+        $request->image->move(public_path('images'), $fileName);
 
-        return response()->json(['message' => 'Sikeres frissítés']);
+        $book = new Book;
+        $book->title = $request->input('title');
+        $book->tags = $request->input('tags');
+        $book->pages = $request->input('pages');
+        $book->description = $request->input('description');
+        $book->image = $fileName;
+        $book->save();
+
+        return redirect()->route('home')->with('message', 'Könyv sikeresen feltöltve!');
+
     }
 }

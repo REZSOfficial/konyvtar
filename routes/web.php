@@ -16,7 +16,7 @@ use App\Http\Controllers\BookController;
 
 Route::get('/create', [BookController::class, 'create']);
 
-Route::get('/', [BookController::class, 'index']);
+Route::get('/', [BookController::class, 'index'])->name('home');
 
 Route::get('/{book}', [BookController::class, 'info']);
 
